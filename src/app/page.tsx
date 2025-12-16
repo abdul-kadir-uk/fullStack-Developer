@@ -24,14 +24,14 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const startAutoSlide = () => {
-    // Clear existing interval before starting a new one
+  const startAutoSlide = React.useCallback(() => {
     if (intervalRef.current) clearInterval(intervalRef.current);
 
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 5000);
-  };
+  }, [images.length]);
+
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -44,11 +44,12 @@ const Home = () => {
   };
 
   useEffect(() => {
-    startAutoSlide(); // start auto-slide on mount
+    startAutoSlide();
     return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current); // cleanup on unmount
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, []);
+  }, [startAutoSlide]);
+
 
   return (
     <div className="bg-black text-white">
@@ -86,12 +87,12 @@ const Home = () => {
       {/* Intro Section */}
       <section className=" border-2 md:h-[50%] p-5 sm:p-12 flex justify-center items-center">
         <div className='w-full h-full max-w-7xl'>
-          <h2 className="text-center text-xl sm:text-3xl font-bold mb-4 text-purple-400">Hi, I'm Abdul Kadir</h2>
+          <h2 className="text-center text-xl sm:text-3xl font-bold mb-4 text-purple-400">Hi, I&apos;m Abdul Kadir</h2>
           <div className=' flex flex-col sm:flex-row sm:justify-between  '>
             <div className="order-2 sm:order-1 sm:text-lg max-w-3xl text-start text-white h-96
             overflow-auto">
               <p>
-                I'm a Full Stack Developer with a passion for solving real-world problems and building websites from scratch.
+                I&apos;m a Full Stack Developer with a passion for solving real-world problems and building websites from scratch.
               </p>
               <p className='pt-2'>
                 I specialize in frontend development using React and Tailwind CSS to create beautiful, responsive interfaces.

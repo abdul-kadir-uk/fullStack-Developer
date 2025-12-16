@@ -13,7 +13,7 @@ const Projects = () => <div>
         <p>I developed a YouTube-like video streaming platform using the MERN stack (MongoDB, Express.js, React, Node.js) with a focus on real-world functionality and scalable architecture.</p>
         <strong>Key Features</strong>
         <ul className="list-disc pl-3">
-          <li>Video Listing & Layout similar to YouTube’s homepage</li>
+          <li>Video Listing & Layout similar to YouTube&apos;s homepage</li>
           <li>Fixed Sidebar Navigation (non-scrolling) for better UX</li>
           <li>Dynamic Video Data fetched from an API</li>
           <li> Video Details Page with title, description, category, and views
