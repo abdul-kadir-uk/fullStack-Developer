@@ -59,6 +59,8 @@ const Projects = () => <div>
         <div className="flex justify-center items-center ">
           <Image src={shoppyglobe} alt="shoppyglobe" className="h-52 md:h-80 object-contain"></Image>
         </div>
+
+        <div className="p-2">
         <p>  ShoppyGlobe is a full-stack e-commerce web application developed using the MERN stack (MongoDB, Express.js, React, Node.js), designed to deliver a smooth and user-friendly online shopping experience.</p>
         <strong>Key Features</strong>
         <ul className="list-disc pl-3">
@@ -95,6 +97,7 @@ const Projects = () => <div>
           <li><b>Database:</b> MongoDB</li>
           <li><b>Concepts Used:</b> REST APIs, Authentication, CRUD operations</li>
         </ul>
+        </div>
 
         <div className="flex md:mt-3 mt-1">
           <a target="_blank" href="https://shoppyglobebyak.netlify.app/" className="cursor-pointer border-2 border-black mr-2 md:mr-5 p-1 md:p-2 hover:bg-blue-300"> Live Link </a>
