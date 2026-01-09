@@ -58,7 +58,7 @@ const Projects = () => {
       </ul>
         </div>
     }  
-    <button className="hover:cursor-pointer hover:underline rounded bg-black text-white" onClick={() => setIsvisible(!isVisible)}>
+    <button className="hover:cursor-pointer hover:underline rounded p-1 bg-black text-white" onClick={() => setIsvisible(!isVisible)}>
   {isVisible ? "see less":"see more..."}
 </button>
       <div className="flex md:mt-3 mt-1">
@@ -114,7 +114,7 @@ const Projects = () => {
           <li><b>Concepts Used:</b> REST APIs, Authentication, CRUD operations</li>
         </ul>
         </div>}
-           <button className="hover:cursor-pointer hover:underline bg-black text-white" onClick={() => setIsvisible1(!isVisible1)}>
+           <button className="hover:cursor-pointer hover:underline p-1 bg-black text-white" onClick={() => setIsvisible1(!isVisible1)}>
   {isVisible1 ? "see less":"see more..."}
 </button>
         </div>
