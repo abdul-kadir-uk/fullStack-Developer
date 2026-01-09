@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image";
 import youtube from "@/app/assets/images/youtube.png"
 import shoppyglobe from '@/app/assets/images/shoppyglobe.png'
+import { useState } from "react";
+  const [isVisible,setIsvisible] = useState(false);
 const Projects = () => <div>
   <h1 className="text-2xl md:text-4xl p-5 text-center"> Projects  </h1>
   <div className="flex justify-center items-center ">
@@ -12,46 +15,52 @@ const Projects = () => <div>
         </div>
         <div className="p-2">
         <p>This is a video streaming platform using the MERN stack (MongoDB, Express.js, React, Node.js) with a focus on real-world functionality and scalable architecture.</p>
-        <strong>Key Features</strong>
-        <ul className="list-disc pl-3">
-          <li>Video Listing & Layout similar to YouTube&apos;s homepage</li>
-          <li>Fixed Sidebar Navigation (non-scrolling) for better UX</li>
-          <li>Dynamic Video Data fetched from an API</li>
-          <li> Video Details Page with title, description, category, and views
-          </li>
-          <li>  Comment System,Users can add, edit, and delete comments</li>
-          <li> Comments are stored in MongoDB with proper validation</li>
-          <li> Like & Dislike Functionality with user-based tracking</li>
-          <li>Responsive Design using Tailwind CSS</li>
-          <li>State Management using React hooks (with consideration for Redux)</li>
-          <li> Routing handled using React Router v7</li>
-        </ul>
+    {
+ isVisible &&
+    <div>
+      <strong>Key Features</strong>
+      <ul className="list-disc pl-3">
+        <li>Video Listing & Layout similar to YouTube&apos;s homepage</li>
+        <li>Fixed Sidebar Navigation (non-scrolling) for better UX</li>
+        <li>Dynamic Video Data fetched from an API</li>
+        <li> Video Details Page with title, description, category, and views
+        </li>
+        <li>  Comment System,Users can add, edit, and delete comments</li>
+        <li> Comments are stored in MongoDB with proper validation</li>
+        <li> Like & Dislike Functionality with user-based tracking</li>
+        <li>Responsive Design using Tailwind CSS</li>
+        <li>State Management using React hooks (with consideration for Redux)</li>
+        <li> Routing handled using React Router v7</li>
+      </ul>
 
-        <strong> Backend Highlights </strong>
+      <strong> Backend Highlights </strong>
 
-        <ul className="list-disc pl-3">
-          <li> RESTful APIs built with Node.js & Express</li>
-          <li>MongoDB & Mongoose for video, comment, and user data modeling</li>
-          <li> Video schema includes:</li>
-          <li>Title, thumbnail URL, video URL</li>
-          <li>Channel information</li>
-          <li>Views, likes, dislikes, and comments</li>
-          <li>Secure CRUD operations with proper validation</li>
-        </ul>
+      <ul className="list-disc pl-3">
+        <li> RESTful APIs built with Node.js & Express</li>
+        <li>MongoDB & Mongoose for video, comment, and user data modeling</li>
+        <li> Video schema includes:</li>
+        <li>Title, thumbnail URL, video URL</li>
+        <li>Channel information</li>
+        <li>Views, likes, dislikes, and comments</li>
+        <li>Secure CRUD operations with proper validation</li>
+      </ul>
 
-        <strong>Tech Stack</strong>
-        <ul>
-          <li><b>Frontend:</b> React, Tailwind CSS, React Router</li>
-          <li><b>Backend:</b> Node.js, Express.js</li>
-          <li><b>Database:</b> MongoDB (Mongoose)</li>
-          <li> <b>Tools & Concepts:</b> REST APIs, MVC architecture, reusable components</li>
-        </ul>
+      <strong>Tech Stack</strong>
+      <ul>
+        <li><b>Frontend:</b> React, Tailwind CSS, React Router</li>
+        <li><b>Backend:</b> Node.js, Express.js</li>
+        <li><b>Database:</b> MongoDB (Mongoose)</li>
+        <li> <b>Tools & Concepts:</b> REST APIs, MVC architecture, reusable components</li>
+      </ul>
+      <div className="flex md:mt-3 mt-1">
+        <a target="_blank" href="https://youtubeclone-byak.netlify.app/" className="cursor-pointer border-2 border-black mr-2 md:mr-5 p-1 md:p-2 hover:bg-blue-300"> Live Link </a>
+        <a target="_blank" href="https://github.com/abdul-kadir-uk/YoutubeClone" className="cursor-pointer border-2 border-black p-1 md:p-2 hover:bg-blue-300"> Github </a>
+      </div>
         </div>
-
-
-        <div className="flex md:mt-3 mt-1">
-          <a target="_blank" href="https://youtubeclone-byak.netlify.app/" className="cursor-pointer border-2 border-black mr-2 md:mr-5 p-1 md:p-2 hover:bg-blue-300"> Live Link </a>
-          <a target="_blank" href="https://github.com/abdul-kadir-uk/YoutubeClone" className="cursor-pointer border-2 border-black p-1 md:p-2 hover:bg-blue-300"> Github </a>
+    }  
+<button onClick={() => setIsvisible(!isVisible)}>
+  {isVisible ? "see less":"see more"}
+</button>
         </div>
       </div>
       <h2 className="text-center text-xl md:text-3xl">2.ShoppyGlobe (An E-commerce Platform)</h2>
