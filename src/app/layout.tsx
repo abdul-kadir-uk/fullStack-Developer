@@ -79,9 +79,9 @@ export default function RootLayout({
               copyright &#169; 2025
             </div>
             <div className="text-center">
-              <Link href={'https://gmail.com'} className='px-2 hover:underline'>gmail</Link>
-              <Link href={'https://github.com'} className='px-2 hover:underline'>github</Link>
-              <Link href={'https://linkdin.com'} className='px-2 hover:underline'>Linkdin</Link>
+              <Link href={'mailto:abdulkadiruk06@gmail.com'} className='px-2 hover:underline'>gmail</Link>
+              <Link href={'https://github.com/abdul-kadir-uk'} className='px-2 hover:underline'>github</Link>
+              <Link href={'https://www.linkedin.com/in/abdul-kadir-110948245/'} className='px-2 hover:underline'>Linkdin</Link>
             </div>
           </div>
         </footer>
