@@ -6,7 +6,7 @@ const Projects = () => <div>
   <div className="flex justify-center items-center ">
     <div className="flex flex-col ">
       <h2 className="text-center text-xl md:text-3xl">1.Youtube Clone</h2>
-      <div className=" w-[90vw] md:w-[70vw] mb-2 md:mb-6 border-2 border-black p-2 md:p-3">
+      <div className="w-[100vw] sm:w-[90vw] md:w-[70vw] mb-2 md:mb-6 border-2 border-black p-2 md:p-3">
         <div className="flex justify-center items-center ">
           <Image src={youtube} alt="youtube" className="h-52 md:h-80 object-contain"></Image>
         </div>
@@ -55,7 +55,7 @@ const Projects = () => <div>
         </div>
       </div>
       <h2 className="text-center text-xl md:text-3xl">2.ShoppyGlobe (An E-commerce Platform)</h2>
-      <div className=" w-[90vw] md:w-[70vw] mb-2 md:mb-6 border-2 border-black p-2 md:p-3">
+      <div className="w-[100vw] sm:w-[90vw] md:w-[70vw] mb-2 md:mb-6 border-2 border-black p-2 md:p-3">
         <div className="flex justify-center items-center ">
           <Image src={shoppyglobe} alt="shoppyglobe" className="h-52 md:h-80 object-contain"></Image>
         </div>
