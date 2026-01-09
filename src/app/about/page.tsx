@@ -25,7 +25,7 @@ const About = () => <div>
     <div className='flex justify-center items-center'>
 
       <div className="p-4 flex justify-center items-center m-2  border-slate-950 border-2 w-[90vw] md:w-[70vw] 
-    h-[50vh] md:h-[70vh] ">
+    h-[90vh] md:h-[70vh] ">
         <div className="w-[80vw]">
           <div className="bg-black">
             <div className="flex p-1 mb-2 text-white justify-between w-[92%] bg-blue-500"><p>HTML</p> <p>92%</p></div>
