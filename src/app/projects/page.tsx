@@ -3,8 +3,11 @@ import Image from "next/image";
 import youtube from "@/app/assets/images/youtube.png"
 import shoppyglobe from '@/app/assets/images/shoppyglobe.png'
 import { useState } from "react";
+const Projects = () => {
+
   const [isVisible,setIsvisible] = useState(false);
-const Projects = () => <div>
+  return (
+<div>
   <h1 className="text-2xl md:text-4xl p-5 text-center"> Projects  </h1>
   <div className="flex justify-center items-center ">
     <div className="flex flex-col ">
@@ -117,5 +120,8 @@ const Projects = () => <div>
     </div>
   </div>
 </div>
+  )
+ 
+}
 
 export default Projects;
