@@ -6,6 +6,7 @@ import { useState } from "react";
 const Projects = () => {
 
   const [isVisible,setIsvisible] = useState(false);
+  const [isVisible1, setIsvisible1] = useState(false);
   return (
 <div>
   <h1 className="text-2xl md:text-4xl p-5 text-center"> Projects  </h1>
@@ -55,15 +56,16 @@ const Projects = () => {
         <li><b>Database:</b> MongoDB (Mongoose)</li>
         <li> <b>Tools & Concepts:</b> REST APIs, MVC architecture, reusable components</li>
       </ul>
+        </div>
+    }  
+    <button className="hover:cursor-pointer hover:underline" onClick={() => setIsvisible(!isVisible)}>
+  {isVisible ? "see less":"see more"}
+</button>
       <div className="flex md:mt-3 mt-1">
         <a target="_blank" href="https://youtubeclone-byak.netlify.app/" className="cursor-pointer border-2 border-black mr-2 md:mr-5 p-1 md:p-2 hover:bg-blue-300"> Live Link </a>
         <a target="_blank" href="https://github.com/abdul-kadir-uk/YoutubeClone" className="cursor-pointer border-2 border-black p-1 md:p-2 hover:bg-blue-300"> Github </a>
       </div>
-        </div>
-    }  
-<button onClick={() => setIsvisible(!isVisible)}>
-  {isVisible ? "see less":"see more"}
-</button>
+
         </div>
       </div>
       <h2 className="text-center text-xl md:text-3xl">2.ShoppyGlobe (An E-commerce Platform)</h2>
@@ -74,6 +76,8 @@ const Projects = () => {
 
         <div className="p-2">
         <p>  ShoppyGlobe is a full-stack e-commerce web application developed using the MERN stack (MongoDB, Express.js, React, Node.js), designed to deliver a smooth and user-friendly online shopping experience.</p>
+       { isVisible1 && <div>
+
         <strong>Key Features</strong>
         <ul className="list-disc pl-3">
           <li>Product Listing & Categories with clean UI</li>
@@ -109,7 +113,13 @@ const Projects = () => {
           <li><b>Database:</b> MongoDB</li>
           <li><b>Concepts Used:</b> REST APIs, Authentication, CRUD operations</li>
         </ul>
+        </div>}
+           <button className="hover:cursor-pointer hover:underline" onClick={() => setIsvisible1(!isVisible1)}>
+  {isVisible1 ? "see less":"see more"}
+</button>
         </div>
+
+   
 
         <div className="flex md:mt-3 mt-1">
           <a target="_blank" href="https://shoppyglobebyak.netlify.app/" className="cursor-pointer border-2 border-black mr-2 md:mr-5 p-1 md:p-2 hover:bg-blue-300"> Live Link </a>
