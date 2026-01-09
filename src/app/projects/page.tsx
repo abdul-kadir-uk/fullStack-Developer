@@ -58,8 +58,8 @@ const Projects = () => {
       </ul>
         </div>
     }  
-    <button className="hover:cursor-pointer hover:underline" onClick={() => setIsvisible(!isVisible)}>
-  {isVisible ? "see less":"see more"}
+    <button className="hover:cursor-pointer hover:underline rounded bg-black text-white" onClick={() => setIsvisible(!isVisible)}>
+  {isVisible ? "see less":"see more..."}
 </button>
       <div className="flex md:mt-3 mt-1">
         <a target="_blank" href="https://youtubeclone-byak.netlify.app/" className="cursor-pointer border-2 border-black mr-2 md:mr-5 p-1 md:p-2 hover:bg-blue-300"> Live Link </a>
@@ -114,8 +114,8 @@ const Projects = () => {
           <li><b>Concepts Used:</b> REST APIs, Authentication, CRUD operations</li>
         </ul>
         </div>}
-           <button className="hover:cursor-pointer hover:underline" onClick={() => setIsvisible1(!isVisible1)}>
-  {isVisible1 ? "see less":"see more"}
+           <button className="hover:cursor-pointer hover:underline bg-black text-white" onClick={() => setIsvisible1(!isVisible1)}>
+  {isVisible1 ? "see less":"see more..."}
 </button>
         </div>
 
